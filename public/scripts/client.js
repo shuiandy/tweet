@@ -1,66 +1,50 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-const $tweet = $(`<article class="tweet">Hello world</article>`);
-
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
- }
-
-const $tweet = createTweetElement(tweetData);
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-// Fake data taken from initial-tweets.json
-const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-}
+  Object.values(tweets).forEach((content) => {
+    const tweet = createTweetElement(content);
+    // $('#container').append(tweet);
+    $(document).ready(function () {
+      $('#display-tweet').append(tweet);
+    });
+    // document.getElementById("display-tweet").appendChild(tweet);
+  });
+};
 
-const createTweetElement = function(tweet) {
-  let $tweet = /* Your code for creating the tweet element */
+const createTweetElement = function (tweet) {
+  const username = tweet.user.name;
+  const avatar = tweet.user.avatars;
+  const handle = tweet.user.handle;
+  const content = tweet.content.text;
+  const createdTime = timeago.format(Date.now() - tweet.created_at);
   // ...
-  return $tweet;
-}
+  return `
+    <header class="username-row">
+      <div class="names">
+        <a class="avatar-img"><img src=${avatar} alt=""></a>
+        <a class="full-name">${username}</a>
+      </div>
+      <a class="username">${handle}</a>
+    </header>
+    <p class="article">${content}</p>
+    <footer class="tweet-footer">
+      <a class="tweet-time">${createdTime}</a>
+      <div class="action-group">
+        <i class="flag fa-xs fa-sharp fa-solid fa-flag"></i>
+        <i class="retweet fa-xs fa-solid fa-retweet"></i>
+        <i class="heart fa-xs fa-solid fa-heart"></i>
+      </div>
+    </footer>
+    `;
+};
 
-renderTweets(data);
+$(document).ready(() => {
+  $.ajax('/tweets', {method: 'GET'}).then((postData) => {
+    renderTweets(postData);
+  });
+  $('form').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax($(this).serialize());
+  });
+});
