@@ -5,25 +5,68 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--    fonts-->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link href="/styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/nav.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/new-tweet.css" rel="stylesheet" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav id="nav-bar">
+      <span class="header">tweeter</span>
+      <span class="compose">
+        <a><strong>Write</strong> a new tweet</a>
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
     </nav>
-
+    <header>
+      <div id="avatar">
+        <img src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div id="name">
+        <h2><String>Shuai</String> Hu</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <form method="POST" action="/tweets">
+          <label for="tweet-text" id="placeholder-text">What are you humming about?</label>
+          <textarea id="tweet-text" name="text"></textarea>
+          <div class="submit-row">
+            <button type="submit" class="tweet-button">Tweet</button>
+            <output class="counter" for="tweet-text" name="counter">140</output>
+          </div>
+        </form>
+    </main>
   </body>
 </html>
