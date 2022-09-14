@@ -1,17 +1,18 @@
-header {
+#personal-info {
   height: 520px;
   width: 100%;
   display: flex;
   padding-top: 120px;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
   flex-direction: column;
   background-color: orange;
   background-image: url('../images/45-degree-fabric-light.png');
 }
 
-#name {
-  /* display: flex; */
+div#name {
   align-items: flex-start;
   color: white;
+  top: 0%;
 }
