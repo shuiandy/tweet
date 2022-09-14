@@ -1,8 +1,9 @@
 .tweets {
-    display: flex;
+    display:flex;
     flex-direction: column;
     background-color: #F3F1EC;
     width: 100%;
+    flex: 1;
     border: 3px solid #555149;
     margin-top: 50px;
 }
@@ -77,4 +78,11 @@
 
 .tweet-footer .action-group .heart:hover {
     color: darkgoldenrod;
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        margin-top: 200px;
+    }
+
 }

@@ -12,7 +12,22 @@
 }
 
 div#name {
+  height: 50px;
   align-items: flex-start;
   color: white;
   top: 0%;
+}
+div#name h2 {
+  align-content: flex-start;
+}
+
+@media only screen and (min-width: 1024px) {
+  #personal-info {
+    height: 400px;
+    max-width:550px;
+    margin-top: 250px;
+    margin-left: 50px;
+    margin-right: 100px;
+    padding: 50px;
+  }
 }

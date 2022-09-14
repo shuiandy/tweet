@@ -14,12 +14,11 @@ html {
 }
 
 main {
-    width: 90%;
+    width: 100%;
     align-self: center;
     background-color: #F3F1EC;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 /*
@@ -35,6 +34,7 @@ body {
 }
 
 #returnTop {
+    /* make a red circle and put it to the right bottom corner */
     display: none;
     text-align: center;
     font-size: 1.5em;
@@ -49,10 +49,19 @@ body {
 }
 
 .fa-angles-up {
+    /* make the arrow icon centered */
     position: relative;
-    top: 15px;
+    top: 20px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+@media only screen and (min-width: 1024px) {
+
+    /* switch to layout to horiziontial */
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+}

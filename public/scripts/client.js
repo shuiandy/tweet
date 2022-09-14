@@ -17,6 +17,8 @@ const createTweetElement = function (tweet) {
   const content = tweet.content.text;
   const createdTime = timeago.format(Date.now() - tweet.created_at);
   console.log(createdTime);
+
+  // escape function to prevent XSS attack
   const escape = function (str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -45,33 +47,8 @@ const createTweetElement = function (tweet) {
     `;
 };
 
-$(document).ready(() => {
-  $('.fa-angles-down').animate({
-    height: '+= 50px',
-  });
+const ajaxGetData = () => {
   $.ajax('/tweets', { method: 'GET' }).then((postData) => {
     renderTweets(postData);
   });
-  $('form').on('submit', function (e) {
-    e.preventDefault();
-    let currentLen = $('textarea').val().length;
-    if (currentLen > 140) {
-      $('#error-box').slideDown('fast');
-      return;
-    }
-    $('#error-box').slideUp('fast');
-    $.ajax('/tweets', {
-      method: 'POST',
-      data: $(this).serialize(),
-    }).then(
-      $.ajax('/tweets', { method: 'GET' }).then((postData) => {
-        renderTweets(postData);
-      })
-    );
-  });
-
-  $('.compose').click(function () {
-    $('#new-tweet').slideToggle('fast');
-    $('textarea').focus();
-  });
-});
+};

@@ -4,7 +4,7 @@
     color: antiquewhite;
     display: none;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 45px;
     width: 100%;
 }
 
@@ -20,7 +20,15 @@
     width: 100%;
     color: #555149;
     background-color: #f4f1ec;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
 
+}
+
+::placeholder {
+    font-weight: 600;
+    color: #555149;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #error-box {
@@ -35,6 +43,7 @@
 
 #error-message {
     margin: 15px;
+    color: red;
 }
 
 .submit-row {
@@ -44,12 +53,6 @@
     padding-top: 10px;
     font-family: 'Bungee', cursive;
     color: #555149;
-}
-
-#placeholder-text {
-    color: #555149;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
 }
 
 .tweet-button {
