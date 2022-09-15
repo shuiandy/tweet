@@ -1,14 +1,7 @@
-// get current data from backend database and render them.
-const ajaxGetData = () => {
-  $.ajax('/tweets', { method: 'GET' }).then((postData) => {
-    renderTweets(postData);
-  });
-};
-
 $(document).ready(() => {
   ajaxGetData();
   // submit user input to backend
-  $('form').on('submit', function (e) {
+  $('form').on('submit', function(e) {
     e.preventDefault();
     let currentLen = $('textarea').val().length;
     // slide error message if user input length exceeds the limit
@@ -23,7 +16,7 @@ $(document).ready(() => {
       method: 'POST',
       data: $(this).serialize(),
       // reload data from database if request succeed
-      success: function () {
+      success: function() {
         ajaxGetData();
       },
     });

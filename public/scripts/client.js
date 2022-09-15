@@ -1,16 +1,16 @@
-const renderTweets = function (tweets) {
+const renderTweets = (tweets) => {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
   Object.values(tweets).forEach((content) => {
     const tweet = createTweetElement(content);
-    $(document).ready(function () {
+    $(document).ready(function() {
       $('#display-tweet').prepend(tweet);
     });
   });
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = (tweet) => {
   const username = tweet.user.name;
   const avatar = tweet.user.avatars;
   const handle = tweet.user.handle;
@@ -19,7 +19,7 @@ const createTweetElement = function (tweet) {
   const createdTime = timeago.format(tweet.created_at);
 
   // escape function to prevent XSS attack
-  const escape = function (str) {
+  const escape = (str) => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -45,4 +45,10 @@ const createTweetElement = function (tweet) {
     </footer>
     </div>
     `;
+};
+// get current data from backend database and render them.
+const ajaxGetData = () => {
+  $.ajax('/tweets', { method: 'GET' }).then((postData) => {
+    renderTweets(postData);
+  });
 };
