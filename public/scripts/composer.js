@@ -10,7 +10,7 @@ $(document).ready(function() {
   });
   // Stretch: making compose button clickable
   $('.compose i').click(function() {
-    $('#new-tweet').slideToggle('fast'); // slideToogle will determine the action, whether it should be slideDown or slideUp
+    $('#new-tweet').slideToggle('fast'); // slideToggle will determine the action, whether it should be slideDown or slideUp
     $('textarea').focus(); // focus the textarea
   });
 
@@ -27,6 +27,6 @@ $(document).ready(function() {
   // button function, back to the top of the page
   sideToolbar.on('click', function(e) {
     e.preventDefault();
-    $(`html, body`).animate({ scrollTop: 0 }, '300');
+    $(`html, body`).animate({ scrollTop: 0 }, 300);
   });
 });
