@@ -15,8 +15,8 @@ const createTweetElement = function (tweet) {
   const avatar = tweet.user.avatars;
   const handle = tweet.user.handle;
   const content = tweet.content.text;
-  const createdTime = timeago.format(Date.now() - tweet.created_at);
-  console.log(createdTime);
+  // convert createdTime to timeago
+  const createdTime = timeago.format(tweet.created_at);
 
   // escape function to prevent XSS attack
   const escape = function (str) {
@@ -39,16 +39,10 @@ const createTweetElement = function (tweet) {
       <a class="tweet-time">${escape(createdTime)}</a>
       <div class="action-group">
         <i class="flag fa-xs fa-sharp fa-solid fa-flag"></i>
-        <i class="retweet fa-xs fa-solid fa-retweet"></i>
+        <i class="retweet fa-xs fa-sharp fa-solid fa-retweet"></i>
         <i class="heart fa-xs fa-solid fa-heart"></i>
       </div>
     </footer>
     </div>
     `;
-};
-
-const ajaxGetData = () => {
-  $.ajax('/tweets', { method: 'GET' }).then((postData) => {
-    renderTweets(postData);
-  });
 };

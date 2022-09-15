@@ -1,88 +1,65 @@
 .tweets {
-    display:flex;
-    flex-direction: column;
-    background-color: #F3F1EC;
-    width: 100%;
-    flex: 1;
-    border: 3px solid #555149;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f1ec;
+  width: 100%;
+  border: 3px solid #555149;
+  margin-top: 50px;
 }
-
 .tweets:hover {
-    box-shadow: 6px 6px #C9CAE2;
+  box-shadow: 6px 6px #c9cae2;
 }
 
 .username-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
-
 .username-row .names {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-
 .username-row .avatar-img img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
-
 .username-row .full-name {
-    margin: 10px;
+  margin: 10px;
 }
-
 .username-row .username {
-    color: #CACFE4;
+  color: #cacfe4;
 }
 
 .article {
-    margin: 20px;
+  margin: 20px;
 }
 
 .tweet-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 3px solid #555149;
-    margin: 18px;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 3px solid #555149;
+  margin: 18px;
+  padding-top: 10px;
 }
-
 .tweet-footer .tweet-time {
-    font-size: 18px;
+  font-size: 18px;
 }
-
-
-.tweet-footer .action-group .flag {
-    color: #47569D;
-}
-
-.tweet-footer .action-group .retweet {
-    color: #47569D;
-}
-
+.tweet-footer .action-group .flag,
+.tweet-footer .action-group .retweet,
 .tweet-footer .action-group .heart {
-    color: #47569D;
+  color: #47569d;
 }
-
-.tweet-footer .action-group .flag:hover {
-    color: darkgoldenrod;
-}
-
-.tweet-footer .action-group .retweet:hover {
-    color: darkgoldenrod;
-}
-
+.tweet-footer .action-group .flag:hover,
+.tweet-footer .action-group .retweet:hover,
 .tweet-footer .action-group .heart:hover {
-    color: darkgoldenrod;
+  color: darkgoldenrod;
 }
 
 @media only screen and (min-width: 1024px) {
-    main {
-        margin-top: 200px;
-    }
-
+  main {
+    margin-top: 200px;
+  }
 }

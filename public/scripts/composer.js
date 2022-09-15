@@ -1,10 +1,15 @@
 $(document).ready(() => {
-  // animate the compose icon
-  $('.fa-angles-down').animate({
-    height: '+= 50px',
+  // animate the compose arrow icon
+  $(function () {
+    const loop = () => {
+      $('.fa-angles-down')
+        .animate({ 'padding-top': '13px' }, 1000)
+        .animate({ 'padding-top': '2px' }, 1000, loop);
+    };
+    loop();
   });
   // Stretch: making compose button clickable
-  $('.compose').click(function () {
+  $('.compose i').click(function () {
     $('#new-tweet').slideToggle('fast'); // slideToogle will determine the action, whether it should be slideDown or slideUp
     $('textarea').focus(); // focus the textarea
   });

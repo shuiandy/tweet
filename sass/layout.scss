@@ -1,0 +1,61 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+    * Global layout stuff
+    */
+
+html {
+  box-sizing: border-box;
+  body {
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    main {
+      width: 100%;
+      align-self: center;
+      background-color: #f3f1ec;
+      padding-left: 5%;
+      padding-right: 5%;
+      #returnTop {
+        /* make a red circle and put it to the right bottom corner */
+        display: none;
+        text-align: center;
+        font-size: 1.5em;
+        border-radius: 50%;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+        color: white;
+        .fa-angles-up {
+          /* make the arrow icon centered */
+          position: relative;
+          top: 20px;
+        }
+      }
+    }
+  }
+}
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+@media only screen and (min-width: 1024px) {
+  /* switch to layout to horiziontial */
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+}

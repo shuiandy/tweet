@@ -8,18 +8,18 @@
   font-weight: 400;
   flex-direction: column;
   background-color: orange;
-  background-image: url("../images/45-degree-fabric-light.png");
-  font-family: "Source Sans Pro", sans-serif;
-}
-#personal-info div#name {
-  color: white;
-  vertical-align: top;
-  font-weight: 300;
-  font-size: 35px;
-  height: 100%;
-}
-#personal-info div#name strong {
-  font-weight: 600;
+  background-image: url('../images/45-degree-fabric-light.png');
+  font-family: 'Source Sans Pro', sans-serif;
+  div#name {
+    color: white;
+    vertical-align: top;
+    font-weight: 300;
+    font-size: 35px;
+    height: 100%;
+    strong {
+      font-weight: 600;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
