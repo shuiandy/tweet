@@ -38,4 +38,6 @@ If your tweet is over the limit, it will show an error message and refuse to sub
 1. Install dependencies using the `npm install` command.
 2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 3. Go to <http://localhost:8080/> in your browser.
-4. Enjoy tweeting!
+4. If you want to dynamically convert SASS file to CSS, install dependencies using the 'npm install -g sass' command.
+5. Start sass-watch using the 'npm run sass-watch' command.
+6. Enjoy tweeting!
