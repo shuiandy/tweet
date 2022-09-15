@@ -21,9 +21,6 @@
   flex-direction: column;
   align-items: center;
 }
-#nav-bar .compose a {
-  position: relative;
-}
 #nav-bar .compose i {
   color: red;
   height: 40px;

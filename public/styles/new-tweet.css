@@ -1,11 +1,6 @@
 .container #new-tweet {
-  align-items: center;
-  justify-content: center;
-  color: antiquewhite;
   display: none;
-  flex-direction: column;
   padding-top: 45px;
-  width: 100%;
 }
 .container #new-tweet #error-box {
   margin-top: 30px;
@@ -20,14 +15,11 @@
   margin: 15px;
   color: red;
 }
-.container #tweet-form {
-  width: 100%;
-}
 .container #tweet-form #tweet-text {
   border: none;
   outline: none;
-  border-bottom: 3px solid gray;
   resize: none;
+  border-bottom: 3px solid gray;
   height: 50px;
   width: 100%;
   color: #555149;

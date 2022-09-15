@@ -1,12 +1,7 @@
 .container {
   #new-tweet {
-    align-items: center;
-    justify-content: center;
-    color: antiquewhite;
     display: none;
-    flex-direction: column;
     padding-top: 45px;
-    width: 100%;
     #error-box {
       margin-top: 30px;
       margin-bottom: 30px;
@@ -22,12 +17,12 @@
     }
   }
   #tweet-form {
-    width: 100%;
     #tweet-text {
+      // remove borders of textarea
       border: none;
       outline: none;
-      border-bottom: 3px solid gray;
       resize: none;
+      border-bottom: 3px solid gray;
       height: 50px;
       width: 100%;
       color: #555149;

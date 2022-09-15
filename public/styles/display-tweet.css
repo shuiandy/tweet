@@ -2,11 +2,9 @@
   display: flex;
   flex-direction: column;
   background-color: #f3f1ec;
-  width: 100%;
   border: 3px solid #555149;
   margin-top: 50px;
 }
-
 .tweets:hover {
   box-shadow: 6px 6px #c9cae2;
 }
@@ -18,21 +16,16 @@
   align-items: center;
   margin: 20px;
 }
-
 .username-row .names {
   display: flex;
-  align-items: center;
 }
-
 .username-row .avatar-img img {
   width: 50px;
   height: 50px;
 }
-
 .username-row .full-name {
   margin: 10px;
 }
-
 .username-row .username {
   color: #cacfe4;
 }
@@ -49,17 +42,14 @@
   margin: 18px;
   padding-top: 10px;
 }
-
 .tweet-footer .tweet-time {
   font-size: 18px;
 }
-
 .tweet-footer .action-group .flag,
 .tweet-footer .action-group .retweet,
 .tweet-footer .action-group .heart {
   color: #47569d;
 }
-
 .tweet-footer .action-group .flag:hover,
 .tweet-footer .action-group .retweet:hover,
 .tweet-footer .action-group .heart:hover {
