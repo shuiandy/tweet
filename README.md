@@ -24,14 +24,6 @@ If your tweet is over the limit, it will show an error message and refust to sub
 
 !["Error handling"](https://github.com/shuiandy/tweet/blob/master/docs/error-handling.gif?raw=true)
 
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-5. Go to <http://localhost:8080/> in your browser.
-
 ## Dependencies
 
 - Express
@@ -39,3 +31,12 @@ If your tweet is over the limit, it will show an error message and refust to sub
 - Chance
 - Md5
 - Node 5.10.x or above
+
+## Getting Started
+
+1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+2. Clone your repository onto your local device.
+3. Install dependencies using the `npm install` command.
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
+6. Enjoy tweeting!
