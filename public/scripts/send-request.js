@@ -5,7 +5,7 @@ $(document).ready(() => {
     e.preventDefault();
     let currentLen = $('textarea').val().length;
     // slide error message if user input length exceeds the limit
-    if (currentLen > 140) {
+    if (currentLen > 140 || currentLen === 0) {
       $('#error-box').slideDown('fast');
       return;
     }
