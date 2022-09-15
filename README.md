@@ -16,11 +16,11 @@ Viewing tweets list:
 
 !["Tweets list"](https://github.com/shuiandy/tweet/blob/master/docs/tweets-view.png?raw=true)
 
-Feature showup:
+Feature show up:
 
-!["Feature showup"](https://github.com/shuiandy/tweet/blob/master/docs/feature-showup.gif?raw=true)
+!["Feature show up"](https://github.com/shuiandy/tweet/blob/master/docs/feature-showup.gif?raw=true)
 
-If your tweet is over the limit, it will show an error message and refust to submit.
+If your tweet is over the limit, it will show an error message and refuse to submit.
 
 !["Error handling"](https://github.com/shuiandy/tweet/blob/master/docs/error-handling.gif?raw=true)
 
