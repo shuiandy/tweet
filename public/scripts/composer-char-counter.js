@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('textarea').on('keyup', function() {
+  $('textarea').on('input', function() {
     let value = $(this).val().length;
     let maximum = 140;
     let currentLen = maximum - value;
