@@ -2,11 +2,13 @@ const renderTweets = (tweets) => {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  Object.values(tweets).forEach((content) => {
+  let result = '';
+  Object.values(tweets).reverse().forEach((content) => {
     const tweet = createTweetElement(content);
-    $(document).ready(function() {
-      $('#display-tweet').prepend(tweet);
-    });
+    result += tweet;
+  });
+  $(document).ready(function() {
+    $('#display-tweet').html(result);
   });
 };
 
